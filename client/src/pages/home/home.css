@@ -1,0 +1,122 @@
+.home {
+  background: url(../../assets/home.jpg); /* Background image for the home section */
+  height: 100vh; /* Full viewport height */
+  background-size: cover; /* Cover the entire area with the background image */
+  position: relative; /* Relative positioning for the gradient overlay */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.home:before {
+  content: ""; /* Empty content for the overlay */
+  position: absolute; /* Position overlay absolutely within the home section */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.1) 100%
+  ); /* Gradient overlay to darken the background */
+}
+
+.hero-content-home {
+  display: flex; /* Flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  gap: 1rem; /* Space between elements */
+}
+
+.home-content {
+  max-width: 50vw; /* Maximum width of 50% of the viewport width */
+  z-index: 500; /* Higher stacking order to appear above the overlay */
+  color: #fff; /* White text color */
+}
+
+.home-content h1 {
+  font-size: 4rem; /* Large font size for the heading */
+  color: orange; /* Orange color for the heading text */
+}
+
+.home-content p {
+  color: rgb(194, 193, 193); /* Light grey color for the paragraph text */
+}
+
+.home-btn {
+  font-size: 1.5rem; /* Larger font size for the button text */
+  padding: 8px 16px; /* Padding around the button text */
+  margin-top: 1rem; /* Space above the button */
+  background: rgb(255, 255, 255); /* White background color for the button */
+  margin-right: 1rem; /* Space to the right of the button */
+  z-index: 100; /* Ensures button appears above other elements */
+}
+
+.home-btn:hover {
+  background: rgb(254, 196, 72); /* Change background color on hover */
+  color: #fff; /* White text color on hover */
+}
+
+.home-btn-secondary {
+  color: #fff; /* White text color */
+  background: orange; /* Orange background color */
+}
+
+.home-btn-secondary:hover {
+  background: rgb(254, 196, 72); /* Change background color on hover */
+  color: #fff; /* White text color on hover */
+}
+
+.home-container {
+  display: flex; /* Flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center content vertically */
+  margin: 0 120px; /* Horizontal margin for centering the content */
+  height: 100%; /* Full height of the parent container */
+}
+
+/* Media query for tablets */
+@media (max-width: 992px) {
+  .home-container {
+    margin: 0 50px;
+  }
+  .home-content h1 {
+    font-size: 2.7rem;
+  }
+
+  .home-btn {
+    font-size: 1.5rem; /* Larger font size for the button text */
+  }
+
+  .home {
+    height: 60vh;
+    overflow: hidden;
+  }
+
+  .home-content {
+    width: 100%;
+  }
+}
+
+/* Media query for phones */
+@media (max-width: 576px) {
+  .home-container {
+    margin: 0 0px;
+  }
+
+  .home-content h1 {
+    font-size: clamp(2rem, 2rem, 2.5rem);
+    margin-top: 4px;
+  }
+
+  .home-btn {
+    font-size: 1.2rem; /* Larger font size for the button text */
+  }
+
+  .home {
+    height: clamp(50vh, 400px, 400px);
+    overflow: hidden;
+  }
+
+  .home-content {
+    max-width: 100vw; /* Maximum width of 50% of the viewport width */
+  }
+}

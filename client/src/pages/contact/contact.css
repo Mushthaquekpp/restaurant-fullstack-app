@@ -1,0 +1,42 @@
+.hero-contact {
+  height: 50vh; /* Sets the hero section height to 50% of the viewport */
+  background: url(../../assets/contactus.jpg) center center no-repeat; /* Sets the background image with no repeat, centered */
+  background-size: cover; /* Ensures the background image covers the entire section */
+  position: relative; /* Positions the hero section relative to its container */
+}
+
+.hero-contact:before {
+  content: ""; /* Creates an empty content block before the hero section */
+  position: absolute; /* Positions the gradient overlay absolutely within the hero */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  ); /* Adds a dark gradient overlay from bottom to top */
+}
+
+.input {
+  margin-bottom: 1rem;
+}
+
+.btn-small {
+  padding: 4px 8px; /* Padding around the button text */
+  font-size: 1.2rem;
+}
+/* Media query for tablets */
+@media (max-width: 992px) {
+  .hero-contact {
+    height: 20vh; /* Sets the hero section height to 50% of the viewport */
+  }
+}
+
+/* Media query for phones */
+@media (max-width: 576px) {
+  .hero-contact {
+    height: 25vh;
+  }
+}

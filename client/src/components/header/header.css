@@ -1,0 +1,30 @@
+.navbar {
+  font-family: "Roboto", sans-serif; /* Sets the font family to Roboto */
+  font-weight: 500; /* Sets the font weight to 500 for slightly bold text */
+  /* background-color: transparent !important;  */
+  border: none; /* Removes any borders */
+  height: fit-content; /* Sets the height based on the content */
+  min-height: 80px; /* Ensures a minimum height of 80px */
+  width: calc(100vw - 17px); /* Adjusts width to account for scrollbar */
+  z-index: 1000; /* Ensures the navbar is on top of other elements */
+  width: 100%; /* Sets the width to 100% */
+  top: -2px; /* Positions the navbar slightly above the top */
+  transition: background-color 0.4s ease-in-out; /* Smooth transition for background color changes */
+  position: fixed;
+}
+
+.sticky-navbar {
+  background-color: #000 !important; /* Changes the background to black when sticky */
+}
+
+.link {
+  font-weight: 400; /* Sets the font weight to 400 for regular text */
+}
+
+.navbar .nav-link {
+  color: #fff; /* White text color for better visibility */
+}
+
+.navbar .nav-link:hover {
+  color: #ddd; /* Changes text color to light gray on hover */
+}

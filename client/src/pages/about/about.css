@@ -1,0 +1,83 @@
+.hero {
+  height: 50vh; /* Sets the hero section height to 50% of the viewport */
+  background: url(../../assets/about.jpg) center center no-repeat; /* Sets the background image with no repeat, centered */
+  background-size: cover; /* Ensures the background image covers the entire section */
+  position: relative; /* Positions the hero section relative to its container */
+}
+
+.hero:before {
+  content: ""; /* Creates an empty content block before the hero section */
+  position: absolute; /* Positions the gradient overlay absolutely within the hero */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  ); /* Adds a dark gradient overlay from bottom to top */
+}
+
+.hero-content {
+  position: absolute; /* Positions the content absolutely within the hero */
+  font-weight: bold; /* Makes the text bold */
+  color: #fff; /* Sets the text color to white */
+  top: 50%; /* Vertically centers the content */
+  left: 50%; /* Horizontally centers the content */
+  transform: translate(-50%, -50%); /* Further centers the content */
+  text-align: center; /* Centers the text within the content block */
+}
+
+.container {
+  display: flex; /* Uses flexbox for layout */
+  justify-content: center; /* Centers the container content horizontally */
+}
+
+.header {
+  color: #e0960d; /* Sets the header color */
+  font-size: 20px; /* Sets the font size for the header */
+}
+
+.content {
+  margin: 20px; /* Adds margin around the content */
+  display: flex; /* Uses flexbox for layout */
+  align-items: center; /* Centers the content vertically */
+  flex-direction: column; /* Arranges the content in a column */
+  width: 100%; /* Sets the content width considering the margins */
+  margin-top: 0; /* Removes the top margin */
+}
+
+.content-detail {
+  word-spacing: 3px; /* Sets spacing between words */
+  margin: 20px 10px; /* Adds margin around the content detail */
+}
+
+/* Media query for tablets */
+@media (max-width: 992px) {
+  .hero {
+    height: 20vh;
+  }
+
+  .content {
+    margin: 0px; /* Adds margin around the content */
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+/* Media query for phones */
+@media (max-width: 576px) {
+  .hero {
+    height: 25vh;
+  }
+
+  .content {
+    margin: 0px; /* Adds margin around the content */
+    width: 100%;
+    margin-top: 10px;
+  }
+  .page-title {
+    margin-top: 1rem;
+  }  
+}
